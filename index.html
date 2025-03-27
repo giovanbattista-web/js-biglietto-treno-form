@@ -8,32 +8,38 @@
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+      <h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         <div class="container">
             <div class="row">
-                <div class="col ">
+                <div class="colonna">
                     <form action="">
-                        <div class="row row-cols-3">
+                        <div class="row g-3 row-cols-3">
                             <div class="col">
-                                <input type="text" placeholder="Nome Cognome" class="form-control" required>
+                                <label for="">Nome Cognome</label>
+                                <input type="text" placeholder="Km da percorrere" id="kmDaPercorrere" class="form-control" required>
                             </div>
                             <div class="col">
-                                <input type="text" placeholder="Km da percorrere" class="form-control" required>
+                                <label for="">Km da percorrere</label>
+                                <input type="text" placeholder="inserisci i km da percorrere" id="kmDaPercorrere" class="form-control" required>
                             </div>
                             <div class="col">
-                                <select name="" class="form-select">
-                                    <option value="">Fascia d'età</option>
-                                    <option value="">Minorenni</option>
+                                <select id="anniUtente" class="form-select">
+                                    <label for="">Fascia d'età</label>
+                                    <option value="">Maggiorenni</option>
                                     <option value="">Over 65</option>
                                 </select>
+                            </div>
+                            <div class="col">
+                                <button id="generaBiglietto" class="btn btn-primary">Genera</button>
+                                <button class="btn btn-primary">Annulla</button>
                             </div>
                            
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
-    </main>
     <script src="./javascript.js/script.js"></script>
 </body>
 </html>
