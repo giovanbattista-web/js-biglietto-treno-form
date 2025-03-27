@@ -16,16 +16,18 @@
                         <div class="row g-3 row-cols-3">
                             <div class="col">
                                 <label for="">Nome Cognome</label>
-                                <input type="text" placeholder="Km da percorrere" id="kmDaPercorrere" class="form-control" required>
+                                <input type="text" placeholder="Inserisci il tuo nome e il tuo cognome" id="nomeCognome" class="form-control" required>
                             </div>
                             <div class="col">
                                 <label for="">Km da percorrere</label>
                                 <input type="text" placeholder="inserisci i km da percorrere" id="kmDaPercorrere" class="form-control" required>
                             </div>
                             <div class="col">
-                                <select id="anniUtente" class="form-select">
                                     <label for="">Fascia d'età</label>
-                                    <option value="">Maggiorenni</option>
+                                    <select id="anniUtente" class="form-select">
+                                    <label for="">Fascia d'età</label>
+                                    <option value="">Maggiorenne</option>
+                                    <option value="">Minorenne</option>
                                     <option value="">Over 65</option>
                                 </select>
                             </div>
@@ -33,12 +35,34 @@
                                 <button id="generaBiglietto" class="btn btn-primary">Genera</button>
                                 <button class="btn btn-primary">Annulla</button>
                             </div>
-                           
                         </div>
                     </form>
                 </div>
-                
             </div>
+                <h2 class="text-center">IL TUO BIGLIETTO</h1>
+                <div>DETTAGLIO PASSEGGERI</div>
+                <hr>
+                        <table>
+                             <thead>
+                                 <tr>
+                                    <th>NOME PASSEGGERO</th>
+                                    <th>Offerta</th>
+                                    <th>Carrozza</th>
+                                    <th>Codice CP</th>
+                                    <th>Codice biglietto</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                   <tr>
+                                     <td>Lorem ipsum, dolor sit amet consectetur</td>
+                                     <td>Lorem ipsum, dolor sit amet consectetur</td>
+                                     <td>Lorem ipsum, dolor sit amet consectetur</td>
+                                     <td>Lorem ipsum, dolor sit amet consectetur</td>
+                                     <td>Lorem ipsum, dolor sit amet consectetur</td>
+                                   </tr>
+                             </tbody>
+                        </table>
+                        <hr>
         </div>
     <script src="./javascript.js/script.js"></script>
 </body>
