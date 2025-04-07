@@ -1,25 +1,37 @@
-let genera = document.getElementById('generaBiglietto');
-let km = document.getElementById('kmDaPercorrere');
-let anni = document.getElementById('anniUtente');
+// RECUPERO ELEMENTI DEL DOM E/O DICHIARAZIONE ED INIZIALIZZAZIONE DELLE VARIABILI
+const km = document.getElementById('km');
+const age = document.getElementById('age');
+const button = document.getElementById('calculate');
+const ageResult = document.getElementById('age-result');
+const kmResult = document.getElementById('km-result');
+const priceResult = document.getElementById('price')
 
-genera.addEventListener('click', function(event){
-    event.preventDefault();
-    km = document.getElementById('kmDaPercorrere').value.trim();
-    anni = document.getElementById('anniUtente').value.trim();
+// CORPO DEL PROGRAMMA 
+button.addEventListener('click', function(e){
+  e.preventDefault();
+  // valori recuperati dalla form
+  let kmValue = parseInt(km.value);
+  let ageValue = parseInt(age.value);
+  // definizione della costante moltiplicativa determinante del prezzo
+  const kmUnit = 0.21;
+  // dichiaro la variabile contenente il prezzo non inizializzata 
+  let price;
+  // definisco i prezzi in base all'età
+  if(ageValue < 18){
+    price = kmUnit * kmValue * 0.8;
+  }
+  else if(ageValue > 65){
+    price = kmUnit * kmValue * 0.6;
+  }
+  else {
+  price = kmUnit * kmValue;
+  }
+  // console.log(price);
+  // mostro i risultati in pagina
+  ageResult.innerText = ageValue;
+  kmResult.innerText = kmValue;
 
-    let price = numeroKm * 0.21;
-    let message;
-    if(anni < 18 ){ 
-                   price = price - price * 0.2;
-                   // SCRIVO IL MESSAGGIO DA MOSTRARE A VIDEO E LO ASSEGNO ALLA VARIABILE MESSAGE
-                   message = `Hai diritto ad uno sconto del 20%. Il prezzo del tuo biglietto è di ${price.toFixed(2)} €`;
-                    }
-    else if (anni > 65){
-                   price = price - price * 0.4;
-                   message = `Hai diritto ad uno sconto del 40%. Il prezzo del tuo biglietto è di ${price.toFixed(2)} €`;
-                    }
-    else 
-    {
-      message = `Il prezzo del tuo biglietto è ${price.toFixed(2)} €`;
-    }
+  priceResult.innerHTML = `<strong>${price.toFixed(2)}</strong>`;
+  
+
 });
