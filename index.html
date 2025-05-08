@@ -2,27 +2,66 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calcolo del prezzo del biglietto del treno</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calcolo del prezzo del biglietto del treno</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form action="">
-        <input type="number" name="" id="km" placeholder="km" min="1">
-        <input type="number" name="" id="age" placeholder="Età" min="0">
-        <button id="calculate">Calcola prezzo</button>
-    </form>
-    <div>
-        <div id="age-result"></div>
-        <div id="km-result"></div>
-        <div id="price"></div>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="bg-white p-50">
+          <form action="">
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="ticket-card bg-blue">
+                  <label for="" class="control-label">
+                    Kilometri da percorrere:
+                  </label>
+                  <input class="form-control" type="number" name="" id="km" placeholder="km" min="1">
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="ticket-card bg-blue">
+                  <label for="" class="control-label">
+                    Età del passeggero:
+                  </label>
+                  <input class="form-control" type="number" name="" id="age" placeholder="Età" min="0">
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="ticket-card bg-blue">
+                  <label for="" class="control-label">
+                    Calcola il prezzo del tuo biglietto
+                  </label>
+                  <button class="btn btn-light rounded-0" id="calculate">Calcola prezzo</button>
+                </div>
+              </div>
+          </form>
+          <div class="row mt-5">
+            <div class="col-12">
+              <h2 id="summary" class="d-none">Riepilogo biglietto</h2>
+            </div>
+            <div class="col-12 col-md-4">
+              <div id="age-result" class="py-5 pl-4 d-none"></div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div id="km-result" class="py-5 ps-4 d-none"></div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div id="price" class="py-5 pl-4 d-none"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <script src="./javascript.js/script.js"></script>
+  </div>
+
+  <script src="./javascript.js/script.js"></script>
 </body>
 
 </html>
